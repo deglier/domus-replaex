@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image"
 import HeroBg from "../assets/images/bg-hero.jpg"
 import Grafism from "../assets/images/grafismo.png"
+import DomusLogo from '../assets/images/domus-logo.png'
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Logo from "../components/atoms/Logo";
@@ -40,7 +41,7 @@ export default function Home({ planos, lastUpdate }) {
           <path fillRule="evenodd" clipRule="evenodd" d="M1367 80V0.5L0 80H1367Z" fill="currentColor"/>
         </svg>
         <svg viewBox="0 0 360 80" fill="none" className=" sm:hidden relative text-brand-complementary-pure" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M360 80.5V0.5L0 80.5H360Z" fill="currentColor"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M360 80.5V0.5L0 80.5H360Z" fill="currentColor"/>
         </svg>
 
       </header>
@@ -52,7 +53,15 @@ export default function Home({ planos, lastUpdate }) {
               <Image src={Grafism} placeholder="blur" className="max-w-[679px] max-h-[679px]" />
             </div>
           </div>
-          <div>teste</div>
+          
+          <div className="px-6 sm:px-0 text-neutral-light-pure sm:w-4/5">
+            <div className="sm:flex sm:items-center sm:divide-x-2 sm:gap-x-4">
+              <Image src={DomusLogo} placeholder="blur" />
+              <p className="mt-4 sm:mt-0 font-black uppercase tracking-[0.32em] text-base leading-none sm:leading-loose sm:pl-4">a escolha ideal</p>
+            </div>
+            <h3 className="mt-5 font-medium text-2xl leading-snug sm:font-bold sm:text-[2rem]">Sistema de chapas de policarbonato ideal para coberturas com iluminação natural contínua</h3>
+          </div>
+          <div className="mt-11 bg-neutral-light-pure px-14 pt-14 pb-9"></div>
         </Container>
       </div>
       <section>
