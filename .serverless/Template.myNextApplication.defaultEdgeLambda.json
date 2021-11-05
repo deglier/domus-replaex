@@ -1,0 +1,17 @@
+{
+  "name": "meygioh-fik5enj",
+  "hash": "hb7Rg08mf2n7CNM62ntpdr16H4YYBkqn8kKdpBfUFTE=",
+  "description": "Default Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/home/degliersa/freelas/domus-replaex/.serverless_nextjs/default-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs14.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::443111828386:role/meygioh-0uxhvsp"
+  },
+  "arn": "arn:aws:lambda:us-east-1:443111828386:function:meygioh-fik5enj",
+  "region": "us-east-1"
+}

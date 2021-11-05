@@ -1,0 +1,5 @@
+{
+  "components": {
+    "myNextApplication": "/home/degliersa/.serverless/components/registry/npm/@sls-next/serverless-component@3.5.2/node_modules/@sls-next/serverless-component"
+  }
+}
