@@ -5,10 +5,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        xs: { max: "360px" },
+      },
       fontFamily: {
         primary: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        contact: "#D8E3EC",
         brand: {
           primary: {
             pure: "#05548D",
@@ -50,6 +54,9 @@ module.exports = {
       },
       objectPosition: {
         "hero-mobile": "50% 0",
+      },
+      boxShadow: {
+        contact: "0px 24px 56px rgba(5, 84, 141, 0.16)",
       },
     },
   },

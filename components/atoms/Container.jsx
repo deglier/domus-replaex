@@ -1,7 +1,7 @@
-export default function Container(props) {
+export default function Container({ className, children, large}) {
   return (
-    <div className={'max-w-6xl mx-auto ' + props.className}>
-      {props.children}
+    <div className={ large ? 'max-w-[1366px] ' : 'max-w-6xl ' + 'mx-auto ' + className}>
+      {children}
     </div>
   );
 }
