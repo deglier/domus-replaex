@@ -5,12 +5,78 @@ import Grafism from "../assets/images/grafismo.png"
 import DomusLogo from '../assets/images/domus-logo.png'
 import ContactBg from "../assets/images/bg-contact.jpg"
 import GotaBlocked from "../assets/images/gota-blocked.png"
+import Grafismo01Mobile from "../assets/images/grafismo-01@mobile.png"
+import Grafismo01Desktop from "../assets/images/grafismo-01@desktop.png"
+import Grafismo02Desktop from "../assets/images/grafismo-02@desktop.png"
+import Grafismo03Desktop from "../assets/images/grafismo-03@desktop.png"
+
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Logo from "../components/atoms/Logo";
 import SpaceAngled from "../components/atoms/SpaceAngled";
+import FeatureList from "../components/molecules/FeatureList";
+import EmbedVideo from "../components/atoms/embed-video";
 
 export default function Home({ planos, lastUpdate }) {
+  const features = [
+    {
+      keyword: "SEGURANÇA",
+      image: Grafismo01Desktop,
+      reverse: false,
+      features: [
+        {
+          title: "100% estanque. Perfis inteligentes, soluções confiáveis",
+          text: "Precisa resolver os problemas de vazamento gerados pelas linhas de luz com policarbonato prismático ou outras soluções translúcidas? Conheça o Domus com sistema BA."
+        },
+        {
+          title: "Sem anteparos que represam a água",
+          text: "Mais segurança contra vazamentos. Precisa resolver os problemas de vazamento gerados pelas linhas de luz com policarbonato prismático ou outras soluções translúcidas? Conheça o Domus com sistema BA."
+        },
+        {
+          title: "100% estanque",
+          text: "O sistema BA tem mais de 25 anos de experiência com grande sucesso em toda a Europa e é a única solução com laudo de resistência mecânica contra arrancamentos para ventos de até 190km/h."
+        },
+      ]
+    },  
+    {
+      keyword: "ECONOMIA",
+      image: Grafismo02Desktop,
+      reverse: true,
+      features: [
+        {
+          title: "Pré-fabricado. Instalação mais rápida",
+          text: "Todos os perfis e acessórios incluídos e pré-montados na fábrica para você montar suas linhas de luz em grandes obras em muito menos tempo."
+        },
+        {
+          title: "Alta produtividade na hora da montagem",
+          text: "Perfis clicáveis nas versões STRONG e STRONG PLUS para assegurar a aplicação perfeita e a garantia de 10 anos da Replaex."
+        },
+        {
+          title: "Fabricação nacional com perfis desenvolvidos na Alemanha",
+          text: "O Domus com sistema BA da Replaex oferece custo de produto nacional com perfileria e conjunto aprovado na Alemanha e amplamente utilizado em toda a Europa."
+        },
+      ]
+    },
+    {
+      keyword: "TECNOLOGIA",
+      image: Grafismo03Desktop,
+      reverse: false,
+      features: [
+        {
+          title: "Tecnologia Infrared",
+          text: "A tecnologia alemã desenvolvida pelo Grupo RODECA - ANSA - REPLAEX assegura a redução da transmissão dos raios infravermelhos para o interior da sua edificação."
+        },
+        {
+          title: "Conforto térmico: até 10º C a menos que outras soluções translúcidas",
+          text: "Os sistemas de policarbonato com a tecnologia Multilux Infrared na cor Heatbloc-Ouro reduzem a incidência dos raios infravermelhos."
+        },
+        {
+          title: "Filtro UV top mundial",
+          text: "O Master UV produzido na Itália pelas empresas do grupo RODECA – ANSA – REPLAEX e coextrudado em ambos os lados das chapas garante a excelência da proteção contra os danos causados pelos raios UV e a durabilidade superior da sua cobertura."
+        },
+      ]
+    },
+  ]
   return (
     <div className="font-primary">
       <Head>
@@ -101,7 +167,13 @@ export default function Home({ planos, lastUpdate }) {
       </div>
       <div className="relative bg-neutral-dark-pure">
         <Container large>
-          <p>teste</p>
+          <div className="w-full sm:hidden">
+            <Image layout="responsive" placeholder="blur" src={Grafismo01Mobile} />
+          </div>
+          <FeatureList items={features} />
+          <Container className="max-w-3xl py-6 px-10 lg:px-0">
+            <EmbedVideo embedId="gSomB553Yzk" />
+          </Container>
         </Container>
 
       </div>
