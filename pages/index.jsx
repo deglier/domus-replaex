@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image"
+import Link from 'next/link'
 import HeroBg from "../assets/images/bg-hero.jpg"
 import Grafism from "../assets/images/grafismo.png"
 import DomusLogo from '../assets/images/domus-logo.png'
@@ -10,12 +11,19 @@ import Grafismo01Desktop from "../assets/images/grafismo-01@desktop.png"
 import Grafismo02Desktop from "../assets/images/grafismo-02@desktop.png"
 import Grafismo03Desktop from "../assets/images/grafismo-03@desktop.png"
 
+import WarrantySeal from "../assets/images/warranty-seal.png"
+
+import IconFb from "../assets/images/icn-fb.png"
+import IconInsta from "../assets/images/icn-insta.png"
+import IconYt from "../assets/images/icn-yt.png"
+
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Logo from "../components/atoms/Logo";
 import SpaceAngled from "../components/atoms/SpaceAngled";
 import FeatureList from "../components/molecules/FeatureList";
 import EmbedVideo from "../components/atoms/embed-video";
+import Form from "../components/molecules/form";
 
 export default function Home({ planos, lastUpdate }) {
   const features = [
@@ -96,11 +104,13 @@ export default function Home({ planos, lastUpdate }) {
           <div className="flex flex-col lg:flex-row text-neutral-light-pure">
             {/* col-1 */}
             <div className="pt-8 max-w-md">
-              <Logo className="w-[9.75rem] lg:w-[13.25rem]" />
+              <Logo color="monochrome" className="w-[9.75rem] lg:w-[13.25rem]" />
               <div className="mt-8 lg:mt-[4.375rem] font-black leading-none uppercase">
                 <h3 className="tracking-[0.32em] text-brand-complementary-pure lg:text-brand-complementary-up text-base lg:text-xl">Domus com Sistema BA</h3>
                 <h1 className="mt-6 text-[2rem] leading-none lg:text-5xl">A solução definitiva para iluminar seu galpão</h1>
-                <Button className="mt-6 w-full lg:w-auto" >Falar com um especialista</Button>
+                <Link href="#form">
+                  <Button className="mt-6 w-full lg:w-auto" >Falar com um especialista</Button>
+                </Link>
               </div>
             </div>
             {/* col-2 */}
@@ -130,7 +140,9 @@ export default function Home({ planos, lastUpdate }) {
             <p className="font-bold text-brand-primary-down text-xl leading-snug sm:text-2xl sm:col-span-2 sm:pr-10">Fabricado no Brasil, o DOMUS é um produto versátil desenvolvido para ser manipulado com todas as telhas do mercado.</p>
             <div className="mt-10 sm:mt-0 sm:col-span-3">
               <p className="text-neutral-dark-down font-light text-xl">O sistema DOMUS pode ser aplicado em todos os tipo de telhas: Trapezoidais; em fibrocimento; em sistema Roll-on; zipadas e auto-portantes; pré-moldadas; termoacústicas; e cobertura de passarelas.</p>
-              <Button className="mt-10 w-full lg:w-auto" >Falar com um especialista</Button>
+              <Link href="#form">
+                <Button className="mt-6 w-full lg:w-auto" >Falar com um especialista</Button>
+              </Link>
             </div>
           </div>
         </Container>
@@ -142,8 +154,8 @@ export default function Home({ planos, lastUpdate }) {
               <h3 className="text-brand-complementary-pure font-bold xs:text-base text-xl sm:text-2xl leading-none">Escolha Domus com sistema BA</h3>
               <p className="mt-6 font-light text-brand-primary-pure xs:text-xl text-2xl text-[2.5rem] leading-tight" >Agende uma apresentação técnica e <strong className="font-medium">saiba tudo sobre o Domus com sistema BA da Replaex</strong></p>
             </div>
-            <div className=" mt-8 sm:w-[44.44%] bg-neutral-light-pure rounded p-6 sm:mt-0 sm:p-14 shadow-contact">
-              <p>teste</p>
+            <div id="form" className=" mt-8 min-h-[27rem] flex sm:w-[44.44%] bg-neutral-light-pure rounded p-6 sm:mt-0 sm:p-14 shadow-contact">
+               <Form className="flex-grow" />
             </div>
           </Container>
           <SpaceAngled className="text-neutral-light-pure transform scale-x-[-1]" />
@@ -174,8 +186,60 @@ export default function Home({ planos, lastUpdate }) {
           <Container className="max-w-3xl py-6 px-10 lg:px-0">
             <EmbedVideo embedId="gSomB553Yzk" />
           </Container>
+          <Container className="max-w-3xl px-6 lg:px-0 pt-14 pb-36 lg:pb-14 border-t border-opacity-20 mt-6">
+            <div className="max-w-2xl mx-auto text-center">
+              <h3 className="uppercase text-2xl leading-snug font-bold text-brand-complementary-pure">Fale agora com um especialista e faça a melhor escolha para a sua obra</h3>
+              <Link href="#form">
+                <Button className="mt-6 w-full lg:w-auto" >Falar com um especialista</Button>
+              </Link>
+            </div>
+          </Container>
         </Container>
 
+      </div>
+      <div className="bg-brand-complementary-pure">
+        <Container className="max-w-4xl relative flex flex-col items-center gap-y-8 gap-x-12 lg:flex-row">
+          <div className="w-44 h-44 -mt-20 lg:w-52 lg:h-52 lg:-mt-24">
+            <Image layout="responsive" placeholder="blur" src={WarrantySeal} />
+          </div>
+          <div className="warranty pb-10 text-neutral-light-pure text-center lg:py-12 lg:text-left">
+            <h3 className="font-bold uppercase text-xl leading-tight lg:text-3xl">A Replaex te dá 10 anos de garantia!</h3>
+            <p className="mt-2 text-brand-complementary-up text-base font-normal leading-tight">Contra amarelamentos e perda de características visuais.</p>
+          </div>
+        </Container>
+      </div>
+      <div className="bg-neutral-light-pure">
+        <Container className="px-6 py-10 text-neutral-dark-down font-light text-sm leading-normal flex flex-col gap-y-10 lg:flex-row gap-x-10">
+          <div className="brand lg:flex-grow">
+            <Logo className="w-[11.25rem]" />
+            <p className="copyright mt-4">&copy; Copyright, {new Date().getFullYear()} - Replaex. Todos os direitos reservados.</p>
+          </div>
+          <div className="contact">
+            <h4 className="font-medium mb-3">Contato</h4>
+            <p>(21) 2446-8811</p>
+            <p>(21) 3283-9693</p>
+            <p>(21) 99795-7860 (WhatsApp)</p>
+            <p className="mt-2">vendas@replaex.com.br</p>
+          </div>
+            <div className="address">
+              <h4 className="font-medium mb-3">Endereço</h4>
+              <address className="not-italic">Estrada da Ligação, 839 - <br /> Taquara, Rio de Janeiro - Rj</address>
+            </div>
+            <div className="social">
+              <h4 className="font-medium mb-3">Acompanhe as novidades em <br /> nossas redes sociais</h4>
+              <div className="links flex gap-x-2">
+                <a href="#" target="_blank">
+                  <Image layout="fixed" src={IconFb} width={32} height={32} />
+                </a>
+                <a href="#" target="_blank">
+                  <Image layout="fixed" src={IconInsta} width={32} height={32} />
+                </a>
+                <a href="#" target="_blank">
+                  <Image layout="fixed" src={IconYt} width={32} height={32} />
+                </a>
+              </div>
+            </div>
+        </Container>
       </div>
 
       <section>

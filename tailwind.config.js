@@ -63,5 +63,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("./tailwind-plugins/padding-safe-area.js")(),
+    require("./tailwind-plugins/margin-safe-area.js")(),
+    require("./tailwind-plugins/not-placeholder-shown.js")(),
+    require("./tailwind-plugins/interaction-variants.js"),
+  ],
 };
