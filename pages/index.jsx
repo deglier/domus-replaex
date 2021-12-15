@@ -80,7 +80,7 @@ export default function Home({ planos, lastUpdate }) {
         },
         {
           title: "Filtro UV top mundial",
-          text: "O Master UV produzido na Itália pelas empresas do grupo RODECA – ANSA – REPLAEX e coextrudado em ambos os lados das chapas garante a excelência da proteção contra os danos causados pelos raios UV e a durabilidade superior da sua cobertura."
+          text: "O Master UV produzido na Itália pelas empresas do grupo RODECA – ANSA – REPLAEX e coextrudado em ambos os lados das painéis garante a excelência da proteção contra os danos causados pelos raios UV e a durabilidade superior da sua cobertura."
         },
       ]
     },
@@ -134,7 +134,7 @@ export default function Home({ planos, lastUpdate }) {
               <Image src={DomusLogo} placeholder="blur" />
               <p className="mt-4 sm:mt-0 font-black uppercase tracking-[0.32em] text-base leading-none sm:leading-loose sm:pl-4">a escolha ideal</p>
             </div>
-            <h3 className="mt-5 font-medium text-2xl leading-snug sm:font-bold sm:text-[2rem]">Sistema de chapas de policarbonato ideal para coberturas com iluminação natural contínua</h3>
+            <h3 className="mt-5 font-medium text-2xl leading-snug sm:font-bold sm:text-[2rem]">Sistema de painéis de policarbonato ideal para coberturas com iluminação natural contínua</h3>
           </div>
           <div className="xs:p-5 xs:mx-5 mt-11 mx-6 p-8 bg-neutral-light-pure sm:mx-0 sm:p-14 sm:pb-9 sm:grid sm:grid-cols-5 ">
             <p className="font-bold text-brand-primary-down text-xl leading-snug sm:text-2xl sm:col-span-2 sm:pr-10">Fabricado no Brasil, o DOMUS é um produto versátil desenvolvido para ser manipulado com todas as telhas do mercado.</p>
@@ -145,6 +145,9 @@ export default function Home({ planos, lastUpdate }) {
               </Link>
             </div>
           </div>
+            <div className="xs:px-5 xs:mx-5 mx-6 lg:mx-0 lg:w-full">
+              <EmbedVideo embedId="gSomB553Yzk" />
+            </div>
         </Container>
         <div className="relative bg-neutral-light-pure">
           <Image layout="fill" placeholder="blur" src={ContactBg} className="object-cover fixed top-0 left-0 right-0 bottom-0 pointer-events-none opacity-10" />
@@ -184,7 +187,6 @@ export default function Home({ planos, lastUpdate }) {
           </div>
           <FeatureList items={features} />
           <Container className="max-w-3xl py-6 px-10 lg:px-0">
-            <EmbedVideo embedId="gSomB553Yzk" />
           </Container>
           <Container className="max-w-3xl px-6 lg:px-0 pt-14 pb-36 lg:pb-14 border-t border-opacity-20 mt-6">
             <div className="max-w-2xl mx-auto text-center">
@@ -228,13 +230,13 @@ export default function Home({ planos, lastUpdate }) {
             <div className="social">
               <h4 className="font-medium mb-3">Acompanhe as novidades em <br /> nossas redes sociais</h4>
               <div className="links flex gap-x-2">
-                <a href="#" target="_blank">
+                <a href="https://www.facebook.com/Replaexsistemadepolicarbonato/" target="_blank">
                   <Image layout="fixed" src={IconFb} width={32} height={32} />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://instagram.com/replaex_multilux?utm_medium=copy_link" target="_blank">
                   <Image layout="fixed" src={IconInsta} width={32} height={32} />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://youtube.com/channel/UCI_7uIMaUU9m8HLElCjbL4A" target="_blank">
                   <Image layout="fixed" src={IconYt} width={32} height={32} />
                 </a>
               </div>

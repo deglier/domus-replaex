@@ -58,7 +58,7 @@ export default function Form(props) {
 
   const handleSubmit = async (values, { resetForm }) => {
     setIsLoading(true);
-    const request = await fetch('https://formsubmit.co/ajax/degliersa@gmail.com', {
+    const request = await fetch('https://formsubmit.co/ajax/segundo.torres@replaex.com.br', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

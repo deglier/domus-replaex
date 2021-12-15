@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "vscode-icons-team.vscode-icons",
+        "bradlc.vscode-tailwindcss",
+        "github.copilot",
+        "editorconfig.editorconfig",
+        "coenraads.bracket-pair-colorizer"
+    ]
+}
