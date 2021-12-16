@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image"
 import Link from 'next/link'
 import HeroBg from "../assets/images/bg-hero.jpg"
-import Grafism from "../assets/images/grafismo.png"
+import Grafismo from "../assets/images/grafismo.png"
 import DomusLogo from '../assets/images/domus-logo.png'
 import ContactBg from "../assets/images/bg-contact.jpg"
 import GotaBlocked from "../assets/images/gota-blocked.png"
@@ -80,7 +80,7 @@ export default function Home({ planos, lastUpdate }) {
         },
         {
           title: "Filtro UV top mundial",
-          text: "O Master UV produzido na Itália pelas empresas do grupo RODECA – ANSA – REPLAEX e coextrudado em ambos os lados das painéis garante a excelência da proteção contra os danos causados pelos raios UV e a durabilidade superior da sua cobertura."
+          text: "O Master UV produzido na Itália pelas empresas do grupo RODECA – ANSA – REPLAEX e coextrudado em ambos os lados dos painéis garante a excelência da proteção contra os danos causados pelos raios UV e a durabilidade superior da sua cobertura."
         },
       ]
     },
@@ -125,7 +125,7 @@ export default function Home({ planos, lastUpdate }) {
         <Container> 
           <div className="-mt-64 sm:mt-[-55.85%] sm:flex sm:flex-row-reverse">
             <div>
-              <Image src={Grafism} placeholder="blur" className="max-w-[679px] max-h-[679px]" />
+              <Image src={Grafismo} placeholder="blur" className="max-w-[679px] max-h-[679px]" />
             </div>
           </div>
           
